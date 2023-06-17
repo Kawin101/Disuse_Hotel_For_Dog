@@ -7,7 +7,7 @@ def download_images(url_pattern, start_index, end_index, save_folder):
 
     for i in range(start_index, end_index + 1):
         url = url_pattern.format(str(i).zfill(3))
-        filename = os.path.join(save_folder, f"kazetachinu{str(i).zfill(3)}.jpg")
+        filename = os.path.join(save_folder, f"totoro{str(i).zfill(3)}.jpg")
         response = requests.get(url)
         if response.status_code == 200:
             with open(filename, 'wb') as file:
@@ -17,10 +17,13 @@ def download_images(url_pattern, start_index, end_index, save_folder):
             print(f"Failed to download {filename}")
 
 # Usage example
-url_pattern = "https://www.ghibli.jp/gallery/kazetachinu{0}.jpg"
-# url_pattern = "https://www.ghibli.jp/gallery/totoro{0}.jpg"
+# url_pattern = "https://www.ghibli.jp/gallery/kazetachinu{0}.jpg"
+url_pattern = "https://www.ghibli.jp/gallery/totoro{0}.jpg"
 start_index = 1
 end_index = 50
-save_folder = "D:\Download\Coding\Assets\Kazetachinu"
+save_folder = "D:\Coding\Studios-Wallpaper-App\Assets\Totoro"
+
+# https://www.ghibli.jp/works/
+url_inpt = input("URL:");
 
 download_images(url_pattern, start_index, end_index, save_folder)
