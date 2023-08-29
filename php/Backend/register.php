@@ -1,3 +1,4 @@
+<!-- http://localhost/HotelForDog/login.php -->
 <!DOCTYPE html>
 <html>
 <h3>สมัครสมาชิก</h3>
@@ -39,3 +40,8 @@ if ($_POST) {
 <form method="post">
 </body>
 </html>
+
+
+
+
+
